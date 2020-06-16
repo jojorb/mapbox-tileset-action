@@ -1,4 +1,4 @@
-[mapbox_tilesets_action]: https://github.com/RobyRemzy/mapbox-tileset-action/workflows/mta/badge.svg?branch=master
+[mapbox_tilesets_action]: https://github.com/RobyRemzy/mapbox-tileset-action/workflows/mapbox_tilesets_action/badge.svg?branch=master
 
 # Mapbox Tilesets Action ![tile_jobs][mapbox_tilesets_action]
 
