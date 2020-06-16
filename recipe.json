@@ -1,0 +1,10 @@
+{
+  "version": 1,
+  "layers": {
+    "$TILESETS_PROJECT_NAME": {
+      "source": "mapbox://tileset-source/$MAPBOX_USERNAME/$TILESETS_PROJECT_NAME",
+      "minzoom": 8,
+      "maxzoom": 16
+    }
+  }
+}

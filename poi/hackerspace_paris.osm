@@ -1,0 +1,149 @@
+﻿<?xml version="1.0" encoding="UTF-8"?><osm version="0.6" generator="Overpass API 0.7.56.1004 6cd3eaec">
+<note>The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.</note>
+<meta osm_base="2020-06-16T00:18:03Z" areas="2020-03-06T11:03:01Z"/>
+
+  <node id="2262755943" lat="48.8767379" lon="2.3666796" version="4" timestamp="2019-03-07T10:06:02Z" changeset="67876433" uid="9451067" user="b-jazz-bot">
+    <tag k="addr:city" v="Paris"/>
+    <tag k="addr:full" v="13 rue des Écluses Saint-Martin, Paris."/>
+    <tag k="addr:housenumber" v="13"/>
+    <tag k="addr:street" v="Rue des Écluses Saint-Martin"/>
+    <tag k="hazard" v="robot"/>
+    <tag k="leisure" v="hackerspace"/>
+    <tag k="name" v="ArtLab"/>
+    <tag k="website" v="https://www.digitalarti.com/blog/artlab"/>
+    <tag k="workshop" v="fablab"/>
+  </node>
+  <node id="2264390378" lat="48.8915013" lon="2.3596583" version="3" timestamp="2015-06-09T21:05:42Z" changeset="31856115" uid="125897" user="overflorian">
+    <tag k="addr:city" v="Paris"/>
+    <tag k="addr:full" v="17 rue de la Chapelle, Paris. Au Théâtre de Verre."/>
+    <tag k="addr:housenumber" v="17"/>
+    <tag k="addr:street" v="Rue de la Chapelle"/>
+    <tag k="hazard" v="robot"/>
+    <tag k="leisure" v="hackerspace"/>
+    <tag k="name" v="BlackBoxe"/>
+    <tag k="website" v="http://blackboxe.fr"/>
+    <tag k="workshop" v="fablab"/>
+  </node>
+  <node id="2371178855" lat="48.8955380" lon="2.3884195" version="5" timestamp="2018-11-05T18:10:21Z" changeset="64206685" uid="2212351" user="cOSMografix">
+    <tag k="leisure" v="hackerspace"/>
+    <tag k="level" v="-1"/>
+    <tag k="name" v="Carrefour numérique²"/>
+    <tag k="opening_hours" v="Tu-Su 12:00-18:45"/>
+    <tag k="short_name" v="Carrefour numérique"/>
+    <tag k="website" v="http://www.cite-sciences.fr/fr/au-programme/lieux-ressources/carrefour-numerique2/"/>
+    <tag k="wheelchair" v="yes"/>
+  </node>
+  <node id="2798968100" lat="48.8683141" lon="2.3525857" version="10" timestamp="2018-05-08T22:18:12Z" changeset="58802475" uid="158826" user="cquest">
+    <tag k="alt_name" v="Maison du Libre et des Communs"/>
+    <tag k="contact:city" v="Paris"/>
+    <tag k="contact:housenumber" v="226"/>
+    <tag k="contact:postcode" v="75002"/>
+    <tag k="contact:street" v="Rue Saint-Denis"/>
+    <tag k="hazard" v="robot"/>
+    <tag k="leisure" v="hackerspace"/>
+    <tag k="name" v="La Paillasse"/>
+    <tag k="office" v="coworking"/>
+    <tag k="opening_hours" v="Th 20:00+"/>
+    <tag k="survey:date" v="2017-06-29"/>
+    <tag k="website" v="https://lapaillasse.org/"/>
+    <tag k="wheelchair" v="no"/>
+    <tag k="workshop" v="fablab"/>
+  </node>
+  <node id="2881600564" lat="48.8878762" lon="2.3826806" version="9" timestamp="2019-12-27T23:04:09Z" changeset="78944006" uid="7550430" user="Britzz">
+    <tag k="addr:city" v="Paris"/>
+    <tag k="addr:housenumber" v="15"/>
+    <tag k="addr:postcode" v="75019"/>
+    <tag k="addr:street" v="Rue Léon Giraud"/>
+    <tag k="hazard" v="robot"/>
+    <tag k="leisure" v="hackerspace"/>
+    <tag k="name" v="WoMa"/>
+    <tag k="website" v="https://www.woma.fr/"/>
+    <tag k="workshop" v="fablab"/>
+  </node>
+  <node id="2903108232" lat="48.8902450" lon="2.3708454" version="3" timestamp="2017-09-04T09:52:56Z" changeset="51713773" uid="107257" user="FrViPofm">
+    <tag k="amenity" v="fablab"/>
+    <tag k="hazard" v="robot"/>
+    <tag k="leisure" v="hackerspace"/>
+    <tag k="name" v="Nouvelle Fabrique"/>
+    <tag k="network" v="FabLab"/>
+  </node>
+  <node id="2950104582" lat="48.8486134" lon="2.3855635" version="5" timestamp="2015-08-19T18:45:39Z" changeset="33446794" uid="1241101" user="Johann Colombano">
+    <tag k="addr:city" v="Paris"/>
+    <tag k="addr:full" v="20 rue de Reuilly, 75012, Paris"/>
+    <tag k="addr:housenumber" v="20"/>
+    <tag k="addr:postcode" v="75012"/>
+    <tag k="addr:street" v="Rue de Reuilly"/>
+    <tag k="alt_name" v="Le Loop"/>
+    <tag k="contact:website" v="http://wiki.leloop.org"/>
+    <tag k="leisure" v="hackerspace"/>
+    <tag k="name" v="Black Loop"/>
+    <tag k="source" v="http://hackerspaces.org"/>
+    <tag k="website" v="http://leloop.org"/>
+    <tag k="workshop" v="fablab"/>
+  </node>
+  <node id="3984132201" lat="48.8502903" lon="2.3890865" version="1" timestamp="2016-02-02T14:13:22Z" changeset="36957698" uid="1241101" user="Johann Colombano">
+    <tag k="addr:full" v="50 rue de Montreuil, Paris"/>
+    <tag k="leisure" v="hackerspace"/>
+    <tag k="name" v="FabClub"/>
+    <tag k="website" v="http://www.lefabclub.paris/"/>
+    <tag k="workshop" v="fablab"/>
+  </node>
+  <node id="4627138546" lat="48.8879359" lon="2.3624596" version="4" timestamp="2019-03-07T10:08:11Z" changeset="67876514" uid="9451067" user="b-jazz-bot">
+    <tag k="addr:city" v="Paris"/>
+    <tag k="addr:housenumber" v="12"/>
+    <tag k="addr:postcode" v="75018"/>
+    <tag k="addr:street" v="Esplanade Nathalie Sarraute"/>
+    <tag k="amenity" v="coworking_space"/>
+    <tag k="email" v="hello@ateliers-draft.com"/>
+    <tag k="internet_access" v="wlan"/>
+    <tag k="internet_access:fee" v="customers"/>
+    <tag k="internet_access:ssid" v="Livebox-10c0"/>
+    <tag k="leisure" v="hackerspace"/>
+    <tag k="name" v="Draft Ateliers"/>
+    <tag k="opening_hours" v="Mo-Fr 10:00-20:00; Sa-Su Off"/>
+    <tag k="phone" v="+33 9 81010217"/>
+    <tag k="source" v="Connaissance locale"/>
+    <tag k="website" v="https://www.ateliers-draft.com/"/>
+    <tag k="workshop" v="fablab"/>
+  </node>
+  <node id="6412519858" lat="48.8533468" lon="2.4029971" version="1" timestamp="2019-04-17T18:18:46Z" changeset="69319892" uid="9466342" user="darnuria_fr">
+    <tag k="addr:city" v="Paris"/>
+    <tag k="addr:housenumber" v="11-15"/>
+    <tag k="addr:postcode" v="75020"/>
+    <tag k="addr:street" v="Rue de la Réunion"/>
+    <tag k="email" v="hi@fuz.re"/>
+    <tag k="leisure" v="hackerspace"/>
+    <tag k="name" v="Fuz.re"/>
+    <tag k="opening_hours" v="We 19:00-22:00"/>
+    <tag k="website" v="https://fuz.frama.site/"/>
+  </node>
+  <node id="6422051803" lat="48.8605899" lon="2.4106308" version="2" timestamp="2019-04-23T20:06:58Z" changeset="69503136" uid="1598001" user="OsmIdf">
+    <tag k="contact:city" v="Paris"/>
+    <tag k="contact:housenumber" v="4"/>
+    <tag k="contact:postcode" v="75020"/>
+    <tag k="contact:street" v="Rue Serpollet"/>
+    <tag k="email" v="fablabparis20@simplon.co"/>
+    <tag k="leisure" v="hackerspace"/>
+    <tag k="name" v="SimplonLab"/>
+    <tag k="opening_hours" v="We 17:00-20:00"/>
+    <tag k="website" v="http://fablab.simplon.co/openlab/"/>
+  </node>
+  <node id="6989714826" lat="48.8476088" lon="2.3566695" version="3" timestamp="2020-05-31T13:12:25Z" changeset="86008505" uid="616774" user="mueschel">
+    <tag k="description" v="tour 32-33, 1er étage, salles 111 et 114"/>
+    <tag k="leisure" v="hackerspace"/>
+    <tag k="level" v="1"/>
+    <tag k="name" v="FabLab Sorbonne Universités"/>
+    <tag k="website" v="http://fablab.sorbonne-universites.fr/"/>
+  </node>
+  <node id="7098253817" lat="48.8904340" lon="2.3686481" version="1" timestamp="2019-12-31T13:23:36Z" changeset="79057150" uid="7550430" user="Britzz">
+    <tag k="addr:housenumber" v="104"/>
+    <tag k="addr:street" v="Rue d'Aubervilliers"/>
+    <tag k="hazard" v="robot"/>
+    <tag k="leisure" v="hackerspace"/>
+    <tag k="name" v="La nouvelle Fabrique"/>
+    <tag k="opening_hours" v="We-Sa 14:00-19:00"/>
+    <tag k="website" v="http://www.nouvellefabrique.fr/"/>
+    <tag k="workshop" v="fablab"/>
+  </node>
+
+</osm>

@@ -1,0 +1,97 @@
+name: mapbox_tilesets_action
+on:
+  push:
+    branches:
+      - master
+    paths-ignore:
+      - "**.md"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2-beta
+        with:
+          node-version: "12"
+      - run: npm install -g osmtogeojson @mapbox/geojson-merge
+
+      - name: convert .osm to .geojson
+        id: if_any_osm
+        shell: bash --noprofile --norc -e -o pipefail {0}
+        run: |
+          unset ANY_OSM
+          if [[ $(ls -1 poi/*.osm | wc -l) -gt 0 ]]; then ANY_OSM='true' ; fi
+          echo set-output name=ANY_OSM::${ANY_OSM}
+          echo ::set-output name=ANY_OSM::${ANY_OSM}
+      - name: use if any osm
+        if: steps.if_any_osm.outputs.ANY_OSM
+        shell: bash
+        run: |
+          cd poi
+          osmtogeojson *.osm > poi-osm.geojson
+
+      - name: merge *.geojson if more than 1
+        id: if_many_geojson
+        shell: bash
+        run: |
+          unset MANY_GEOJSON
+          if [[ $(ls -1 poi/*.geojson | wc -l) -gt 1 ]]; then MANY_GEOJSON='true' ; fi
+          echo set-output name=MANY_GEOJSON::${MANY_GEOJSON}
+          echo ::set-output name=MANY_GEOJSON::${MANY_GEOJSON}
+      - name: use merge geojson
+        if: steps.if_many_geojson.outputs.MANY_GEOJSON
+        shell: bash
+        run: geojson-merge poi/*.geojson > poi/poi.geojson
+
+      - name: rename if unique *.geojson
+        id: if_as_geojson
+        shell: bash
+        run: |
+          unset AS_GEOJSON
+          if [[ $(ls -1 poi/*.geojson | wc -l) -eq 1 ]]; then AS_GEOJSON='true' ; fi
+          echo set-output name=AS_GEOJSON::${AS_GEOJSON}
+          echo ::set-output name=AS_GEOJSON::${AS_GEOJSON}
+      - name: use remane geojson
+        if: steps.if_as_geojson.outputs.AS_GEOJSON
+        shell: bash
+        run: mv poi/*.geojson poi/poi.geojson
+
+      - uses: actions/upload-artifact@master
+        with:
+          name: poi.geojson
+          path: poi
+
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-python@v2
+        with:
+          python-version: "3.8"
+          architecture: "x64"
+      - name: Set up Python env
+        run: |
+          python -m venv venv
+          . venv/bin/activate
+          python -m pip install --upgrade pip
+      - name: Pip install
+        run: pip install mapbox-tilesets
+
+      - uses: actions/download-artifact@master
+        with:
+          name: poi.geojson
+          path: poi
+
+      - name: Tilsets add source
+        run: tilesets add-source ${{secrets.MAPBOX_USERNAME}} ${{secrets.TILESETS_PROJECT_NAME}} poi/poi.geojson --token ${{secrets.MAPBOX_ACCESS_TOKEN}}
+
+      - name: Replace inside recipe.json
+        run: |
+          sed -i 's/$MAPBOX_USERNAME/${{secrets.MAPBOX_USERNAME}}/g' recipe.json
+          sed -i 's/$TILESETS_PROJECT_NAME/${{secrets.TILESETS_PROJECT_NAME}}/g' recipe.json
+
+      - name: Create a new tileset
+        run: tilesets create ${{secrets.MAPBOX_USERNAME}}.${{secrets.TILESETS_PROJECT_NAME}} --recipe recipe.json --name "${{secrets.TILESETS_PROJECT_NAME}}" --token ${{secrets.MAPBOX_ACCESS_TOKEN}}
+      - name: Publish tileset
+        run: tilesets publish ${{secrets.MAPBOX_USERNAME}}.${{secrets.TILESETS_PROJECT_NAME}} --token ${{secrets.MAPBOX_ACCESS_TOKEN}}
